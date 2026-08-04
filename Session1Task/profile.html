@@ -1,83 +1,243 @@
 <!doctype html>
 <html lang="en">
-  <header>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mohammed's Al Abri Profile</title>
-  </header>
+  </head>
   <body>
-    <h1>Mohammed Abdul Hamid Mohammed Al Aabri</h1>
-    <p1>Coding @ Codeline</p1>
+    <h1 id="top">Mohammed Abdul Hamid Mohammed Al Aabri</h1>
+    <p>Coding @ Codeline</p>
     <nav>
-      <a href="company.html" target="_blank" rel="noopener">Company</a>
+      <a href="company.html">Company</a>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#experience">Experience</a>
+      <a href="#RegForm">Registration Form</a>
     </nav>
-    <section id="about">
-      <h2>About</h2>
-      <img
-        src="img/I'dWin.png"
-        alt="Gogo from Jujutsu Kaisen Anime Saying I'd Win"
-      />
-      <p>
-        Computer Science graduate from <em>Sultan Qaboos University</em>,
-        specialized in Cybersecurity and Computing Infrastructure. I’m focused
-        on defensive security — understanding how systems get attacked so I can
-        help stop it — while staying equally comfortable on the development
-        side, particularly .NET.
-      </p>
-      <audio controls>
-        <source src="audio/Hello.mp3" type="audio/mpeg" />
-        Your browser doesn't support audio playback.
-      </audio>
-    </section>
-    <br />
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li>Problem Solving</li>
-        <li>.NET Backend Development</li>
-        <li>AI for Productivity</li>
-      </ul>
-      <h3>Learning Path</h3>
-      <ol>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>Javascript</li>
-        <li>Angular</li>
-      </ol>
-    </section>
-    <section id="experience">
-      <table>
-        <caption>
-          <h2>Experience</h2>
-        </caption>
-        <thead>
-          <tr>
-            <th scope="col">Role</th>
-            <th scope="col">Company</th>
-            <th scope="col">Duration</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Full Stack .NET Developer</td>
-            <td>Rihal-Codeline</td>
-            <td>04/2026-present</td>
-          </tr>
-          <tr>
-            <td>Full Stack Java Developer</td>
-            <td>Rihal-Codeline</td>
-            <td>07/2025-09/2025</td>
-          </tr>
-          <tr>
-            <td>Information Security Intern</td>
-            <td>Ooredoo</td>
-            <td>07/2024-09/2024</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+    <main>
+      <section id="about">
+        <h2>About</h2>
+        <img
+          src="img/I'dWin.png"
+          alt="Gogo from Jujutsu Kaisen Anime Saying I'd Win"
+          width="300"
+          height="300"
+        />
+        <p>
+          Computer Science graduate from <em>Sultan Qaboos University</em>,
+          specialized in Cybersecurity and Computing Infrastructure. I’m focused
+          on defensive security — understanding how systems get attacked so I
+          can help stop it — while staying equally comfortable on the
+          development side, particularly .NET.
+        </p>
+        <audio controls>
+          <source src="audio/Hello.mp3" type="audio/mpeg" />
+          Your browser doesn't support audio playback.
+        </audio>
+      </section>
+      <br />
+      <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+          <li>Problem Solving</li>
+          <li>.NET Backend Development</li>
+          <li>AI for Productivity</li>
+        </ul>
+        <h3>Learning Path</h3>
+        <ol>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Javascript</li>
+          <li>Angular</li>
+        </ol>
+      </section>
+      <section id="experience">
+        <table>
+          <caption>
+            Experience
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Role</th>
+              <th scope="col">Company</th>
+              <th scope="col">Duration</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Full Stack .NET Developer</td>
+              <td>Rihal-Codeline</td>
+              <td>04/2026-present</td>
+            </tr>
+            <tr>
+              <td>Full Stack Java Developer</td>
+              <td>Rihal-Codeline</td>
+              <td>07/2025-09/2025</td>
+            </tr>
+            <tr>
+              <td>Information Security Intern</td>
+              <td>Ooredoo</td>
+              <td>07/2024-09/2024</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="RegForm">
+        <h2>Employee Registration Form</h2>
+        <form action="" method="post">
+          <fieldset>
+            <legend>Personal Details</legend>
+
+            <label for="name">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Full Name"
+              minlength="3"
+              maxlength="50"
+              required
+            />
+            <br />
+
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="example@email.com"
+              required
+            />
+            <br />
+
+            <label for="age">Age</label>
+            <input
+              type="number"
+              id="age"
+              name="age"
+              placeholder="Age"
+              min="18"
+              max="65"
+            />
+            <br />
+
+            <label for="hireDate">Hire Date</label>
+            <input type="date" id="hireDate" name="hireDate" />
+            <br />
+
+            <label for="bio">Short Bio</label>
+            <textarea
+              id="bio"
+              name="bio"
+              placeholder="Short Bio"
+              rows="4"
+              cols="50"
+            ></textarea>
+          </fieldset>
+
+          <br />
+
+          <fieldset>
+            <legend>Employment Details</legend>
+
+            <label for="employeeCode">Employee Code</label>
+            <input
+              type="text"
+              id="employeeCode"
+              name="employeeCode"
+              placeholder="Employee Code"
+              pattern="[A-Z]{3}-[0-9]{4}"
+            />
+            <br />
+
+            <label for="department">Department</label>
+            <select id="department" name="department">
+              <option value="IT">Information Technology</option>
+              <option value="HR">Human Resources</option>
+              <option value="Finance">Finance</option>
+            </select>
+            <br />
+
+            <input
+              type="radio"
+              id="fullTime"
+              name="employmentType"
+              value="fullTime"
+              checked
+            />
+            <label for="fullTime">Full Time</label>
+            <input
+              type="radio"
+              id="partTime"
+              name="employmentType"
+              value="partTime"
+            />
+            <label for="partTime">Part Time</label>
+            <input
+              type="radio"
+              id="contract"
+              name="employmentType"
+              value="contract"
+            />
+            <label for="contract">Contract</label>
+            <br />
+
+            <input
+              type="checkbox"
+              id="healthInsurance"
+              name="benefits"
+              value="healthInsurance"
+            />
+            <label for="healthInsurance">Health Insurance</label>
+            <input
+              type="checkbox"
+              id="retirementPlan"
+              name="benefits"
+              value="retirementPlan"
+            />
+            <label for="retirementPlan">Retirement Plan</label>
+            <br />
+
+            <label for="resume">Resume</label>
+            <input
+              type="file"
+              id="resume"
+              name="resume"
+              accept=".pdf,.doc,.docx"
+            />
+            <br />
+
+            <label for="employeeId">Employee ID</label>
+            <input
+              type="text"
+              id="employeeId"
+              name="employeeId"
+              value="EMP-2044"
+              readonly
+            />
+            <br />
+
+            <label for="legacyField">Legacy Field</label>
+            <input
+              type="text"
+              id="legacyField"
+              name="legacyField"
+              value="n/a"
+              disabled
+            />
+          </fieldset>
+
+          <br />
+
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2026 Mohammed Al Abri</p>
+      <a href="#top">Back to top</a>
+    </footer>
   </body>
 </html>
