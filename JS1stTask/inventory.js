@@ -37,6 +37,27 @@ const products = [
     }
 ];
 
+let totalInventoryValue = 0;
+for (const product of products) {
+    totalInventoryValue += product.price * product.stock;
+}
+
+const rendertTotalInventoryValue = (value) => {
+    return `
+    <div class="col-12 mb-3">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Total Inventory Value</h5>
+                <p class="card-text">${totalInventoryValue.toFixed(2)}</p>
+            </div>
+        </div>
+    </div>
+  `;
+}
+
+document.getElementById("totalInventoryValue").innerHTML = rendertTotalInventoryValue(totalInventoryValue);
+
+
 const renderProductCard = (product) => {
     return `
     <div class="col-12 col-md-4 mb-3">
