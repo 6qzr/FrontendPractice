@@ -42,9 +42,10 @@ const renderProductCard = (product) => {
     <div class="col-12 col-md-4 mb-3">
       <div class="card h-100">
         <div class="card-body">
-          <h5 class="card-title">${employee.name}</h5>
-          <p class="card-text text-muted mb-0">${employee.role}</p>
-          <p class="card-text"><small class="text-muted">${employee.department}</small></p>
+          <h5 class="card-title">${product.name}</h5>
+          <p class="card-text text-muted mb-0">${product.price.toFixed(2)}</p>
+          <p class="card-text"><small class="text-muted">${product.stock} in stock</small></p>
+          <p class="card-text"><small class="text-muted">${product.category}</small></p>
         </div>
       </div>
     </div>
