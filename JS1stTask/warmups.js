@@ -53,7 +53,7 @@ function greet(name) {
 }
 
 // Function Expression
-const greet = function (name) {
+const greett = function (name) {
   return `Hello, ${name}!`;
 };
 
@@ -72,3 +72,16 @@ function sum(...numbers) {
     return numbers.reduce((total, num) => total + num, 0); // 0 is important to handle empty array
 }
 
+
+// This Keyword
+const person = {
+    name: "Mohammed",
+    getName: function() {
+        return this.name;
+    },
+    getNameArrow: () => {
+        return this.name;
+    }
+}
+console.log(person.getName()); // "Mohammed"
+console.log(person.getNameArrow()); // undefined, because arrow functions do not have their own 'this'
