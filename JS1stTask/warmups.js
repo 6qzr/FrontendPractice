@@ -46,4 +46,29 @@ switch (true) {
     console.log("Grade: F");
 }
 
+// Functions
+// Function Declaration
+function greet(name) {
+  return `Hello, ${name}!`;
+}
+
+// Function Expression
+const greet = function (name) {
+  return `Hello, ${name}!`;
+};
+
+// Arrow Function
+const greeting = (name) => {
+  return `Hello, ${name}!`;
+};
+
+// Function with default parameter
+function greet(name = "Guest") {
+  return `Hello, ${name}!`;
+}
+
+// Function with rest parameters
+function sum(...numbers) {
+    return numbers.reduce((total, num) => total + num, 0); // 0 is important to handle empty array
+}
 
