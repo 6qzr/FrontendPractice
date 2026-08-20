@@ -58,6 +58,30 @@ const rendertTotalInventoryValue = (value) => {
 document.getElementById("totalInventoryValue").innerHTML = rendertTotalInventoryValue(totalInventoryValue);
 
 
+let stockBelowTen = 0;
+
+for (const product of products) {
+    if (product.stock < 10) {
+        stockBelowTen++;
+    }
+}
+
+const renderStockBelowTen = (count) => {
+    return `
+    <div class="col-12 mb-3">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Products with Stock Below 10</h5>
+                <p class="card-text">${count}</p>
+            </div>
+        </div>
+    </div>
+  `;
+}
+
+document.getElementById("stockBelowTen").innerHTML = renderStockBelowTen(stockBelowTen);
+
+
 const renderProductCard = (product) => {
     return `
     <div class="col-12 col-md-4 mb-3">
