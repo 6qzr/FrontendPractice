@@ -23,4 +23,18 @@ for (const city of cities) {
   console.log(`City: ${city}`);
 }
 
+// Destructing
+const order = {
+  id: 101,
+  customer: "Sara Ahmed",
+  total: 249.99,
+  status: "Shipped",
+};
+
+const { customer, total } = order;
+
+
+const numsArray = [1, 2, 3, 4];
+
+const  { num1, num2, ...restNums} = numsArray;
 
