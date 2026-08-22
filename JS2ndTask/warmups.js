@@ -38,3 +38,6 @@ const numsArray = [1, 2, 3, 4];
 
 const  { num1, num2, ...restNums} = numsArray;
 
+function destructureOrder({ id, customer, total, status}) {
+    return `Order ${id}: ${customer} - $${total} - ${status}`;
+}
