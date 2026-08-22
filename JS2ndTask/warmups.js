@@ -33,11 +33,17 @@ const order = {
 
 const { customer, total } = order;
 
-
 const numsArray = [1, 2, 3, 4];
 
-const  { num1, num2, ...restNums} = numsArray;
+const { num1, num2, ...restNums } = numsArray;
 
-function destructureOrder({ id, customer, total, status}) {
-    return `Order ${id}: ${customer} - $${total} - ${status}`;
+function destructureOrder({ id, customer, total, status }) {
+  return `Order ${id}: ${customer} - $${total} - ${status}`;
 }
+
+// Spread & Rest
+const onlineOrders = [101, 102, 103, 104];
+
+const inStoreOrders = [105, 106, 107, 108];
+
+const allOrders = [...onlineOrders, inStoreOrders];
