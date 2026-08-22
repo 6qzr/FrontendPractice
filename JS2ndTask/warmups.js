@@ -46,8 +46,12 @@ const onlineOrders = [101, 102, 103, 104];
 
 const inStoreOrders = [105, 106, 107, 108];
 
-const allOrders = [...onlineOrders, inStoreOrders];
+const allOrders = [...onlineOrders, ...inStoreOrders];
 
 const cancelledOrder = { ...order, status: "Cancelled" };
 console.log(order);
 console.log(cancelledOrder);
+
+function getOrderTotals(...totals) {
+    return totals;
+}
